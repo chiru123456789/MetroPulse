@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MetroPulse IoT Transit</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#051424;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#002113", "secondary-fixed": "#6ffbbe", "secondary-fixed-dim": "#4edea3", "inverse-on-surface": "#233143", "on-surface": "#d4e4fa", "on-primary": "#003640", "on-secondary": "#003824", "secondary-container": "#00a572", "on-tertiary-fixed": "#2a1700", "primary-fixed": "#acedff", "tertiary-fixed-dim": "#ffb95f", "error": "#ffb4ab", "surface-bright": "#2c3a4c", "surface-container-lowest": "#010f1f", "surface-tint": "#4cd7f6", "tertiary": "#ffb95f", "on-primary-container": "#00424f", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "primary-container": "#06b6d4", "inverse-surface": "#d4e4fa", "surface": "#051424", "tertiary-fixed": "#ffddb8", "on-error-container": "#ffdad6", "surface-container-high": "#1c2b3c", "primary-fixed-dim": "#4cd7f6", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#273647", "on-error": "#690005", "inverse-primary": "#00687a", "on-primary-fixed": "#001f26", "outline-variant": "#3d494c", "primary": "#4cd7f6", "on-secondary-container": "#00311f", "secondary": "#4edea3", "surface-variant": "#273647", "on-tertiary-fixed-variant": "#653e00", "surface-container": "#122131", "on-background": "#d4e4fa", "on-surface-variant": "#bcc9cd", "on-primary-fixed-variant": "#004e5c", "on-tertiary-container": "#563400", "background": "#051424", "tertiary-container": "#e79400", "outline": "#869397", "on-tertiary": "#472a00", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "space-md": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "gutter": "0.75rem", "margin-lg": "1.5rem", "gutter-lg": "1rem", "space-xl": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "data-metric-xl": ["JetBrains Mono"], "headline-xl": ["Inter"], "headline-xl-mobile": ["Inter"], "data-metric-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "label-caps": ["Inter"], "body-lg": ["Inter"], "telemetry-code": ["JetBrains Mono"], "body-md": ["Inter"], "data-metric-sm": ["JetBrains Mono"] }, "fontSize": { "data-metric-xl": ["28px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "data-metric-lg": ["20px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "telemetry-code": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "data-metric-sm": ["14px", { "lineHeight": "18px", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-24 px-margin flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="MetroPulse Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDG4FYmsJpq0lP8Y61xRhZ-8WNp4-oOYaYQGSnT3KIzY5RiO6fGBKFBWw9HlHgGVXs07XGos74WAHC-L33k7WboB-lvxvXucL3ASHmjtCicwD1-vHCYDv-V0H8_2YtUliidl9HqdmdrW-1v0FTM5jnLpPlISM9W4zRfDKP1J5KlknetzSOssQtZi-nrpvZ4gafqYZl97yPxKKCYB-ygDW_835LVbkV1UGvfesMSFmZm"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">MetroPulse</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Passenger App</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded-lg"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-caps text-label-caps text-secondary uppercase">Live</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1 rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[14px]">train</span><span class="font-body-sm text-body-sm text-on-surface font-semibold">Majestic Station</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-telemetry-code text-telemetry-code text-on-surface-variant uppercase">Online | Low Latency Edge Sync</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-24 pb-20 bg-surface"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- Notice / Demo Disclaimer Pill -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[16px] animate-pulse">bolt</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface truncate">Real-time Demo Estimates • Powered by MetroPulse IoT</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-telemetry-code bg-surface-container-high text-primary tracking-wider uppercase font-semibold">Edge-v2</span>
+</div>
+<!-- Station Selector & Switcher Modal Trigger -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<div class="min-w-0">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Current Departure Station</p>
+<p class="font-headline-md text-headline-md text-on-surface font-semibold truncate">Majestic Interchange</p>
+</div>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high hover:bg-surface-container-highest active:scale-95 transition-all text-primary px-space-md py-space-xs rounded-lg font-body-sm text-body-sm font-semibold shadow-sm" id="station-toggle-btn">
+<span>Switch</span>
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+</button>
+</div>
+<!-- Quick Station Selector Drawer (Interactive micro-state) -->
+<div class="hidden mt-space-md pt-space-sm space-y-space-xs bg-surface-container rounded-lg p-space-sm transition-all duration-200" id="station-drawer">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Select Line or Hub</p>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="text-left px-space-sm py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold flex items-center justify-between">
+<span>Majestic Hub</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="text-left px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm">
+<span>Indiranagar Stn</span>
+</button>
+<button class="text-left px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm">
+<span>MG Road Tech Park</span>
+</button>
+<button class="text-left px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm">
+<span>Whitefield Terminal</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hero Transit Card: Next Train Imminent Arrival -->
+<div class="relative bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low p-space-lg rounded-xl shadow-xl overflow-hidden">
+<!-- Subtle glow orb -->
+<div class="absolute -right-12 -top-12 w-40 h-40 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="space-y-0.5 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded text-[10px] font-telemetry-code bg-secondary/20 text-secondary font-bold uppercase tracking-wider">Fast Transit Line 1</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant font-medium">#EXP-402</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold truncate">North-South Expressway</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">via City Center &amp; Financial District</p>
+</div>
+<!-- Platform Token -->
+<div class="bg-surface-container-highest px-3 py-1.5 rounded-lg flex flex-col items-center justify-center shrink-0 shadow-sm">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Track</span>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold leading-none mt-0.5">P2</span>
+</div>
+</div>
+<!-- Countdown & Status Banner -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest/80 rounded-lg backdrop-blur-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative flex h-3.5 w-3.5 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-secondary"></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Live Countdown</span>
+<span class="font-data-metric-lg text-data-metric-lg text-secondary font-bold tracking-tight">02m 40s</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Composition</span>
+<span class="font-telemetry-code text-telemetry-code text-primary font-semibold">4-Car EMU Electric</span>
+</div>
+</div>
+</div>
+<!-- Smart Recommendation: Optimal Coach Boarding -->
+<div class="bg-gradient-to-r from-primary-container/25 via-surface-container-high to-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">recommend</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-1.5 py-0.5 rounded font-bold uppercase">Optimal Boarding</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Coach C1 or Coach C2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-relaxed">
+          Boarding at <strong class="text-primary font-semibold">Coach 1 (Front)</strong> gives you a <strong class="text-secondary font-semibold">92% chance</strong> of finding a vacant seat.
+        </p>
+<div class="mt-space-sm flex items-center gap-space-xs text-on-surface-variant font-telemetry-code text-telemetry-code bg-surface-container-low px-2 py-1 rounded inline-flex">
+<span class="material-symbols-outlined text-primary text-[14px]">directions_walk</span>
+<span>Walk 15 meters toward Boarding Gate Zone A</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Station Crowd Status Summary -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">groups</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Station Crowd Flow</h3>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-telemetry-code text-telemetry-code bg-tertiary/15 text-tertiary font-semibold uppercase">
+        Moderate Level
+      </span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">warning</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<strong class="text-on-surface font-medium">Platform 2 East Wing</strong> has dense waiting queues. Move toward <span class="text-primary font-medium">Center</span> or <span class="text-primary font-medium">West Gantry</span> for rapid boarding.
+      </p>
+</div>
+</div>
+<!-- Train Composition Schematic & Real-time Coach Breakdown -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Coach Real-time Density</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4-Car Train Composition (#EXP-402)</p>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+<span class="font-label-caps text-label-caps uppercase">Train Head</span>
+</div>
+</div>
+<!-- Coach Telemetry Cards Grid -->
+<div class="space-y-space-sm">
+<!-- Coach 1: Front (Spacious) -->
+<div class="p-space-sm bg-surface-container-low rounded-xl shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-data-metric-sm text-data-metric-sm font-bold flex items-center justify-center">C1</span>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Front Coach</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-telemetry-code bg-secondary/15 text-secondary font-semibold">Best Pick</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Low Crowd • Vacant Seats Available</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-lg text-data-metric-lg text-primary font-bold">20%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Load</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 20%"></div>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-telemetry-code text-telemetry-code">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-primary">pedal_bike</span> Cycle Storage Bay</span>
+<span>Zone A (Car 1)</span>
+</div>
+</div>
+<!-- Coach 2: Comfortable -->
+<div class="p-space-sm bg-surface-container-low rounded-xl shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface font-data-metric-sm text-data-metric-sm font-bold flex items-center justify-center">C2</span>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Mid-Front</span>
+<span class="material-symbols-outlined text-primary text-[15px]">accessible</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Comfortable • Few Standing</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-lg text-data-metric-lg text-secondary font-bold">35%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Load</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full transition-all duration-500" style="width: 35%"></div>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-telemetry-code text-telemetry-code">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-primary">accessible_forward</span> Dedicated Wheelchair Space</span>
+<span>Zone B (Car 2)</span>
+</div>
+</div>
+<!-- Coach 3: Moderate Standing -->
+<div class="p-space-sm bg-surface-container-low rounded-xl shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface font-data-metric-sm text-data-metric-sm font-bold flex items-center justify-center">C3</span>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Mid-Rear</span>
+<p class="font-body-sm text-body-sm text-tertiary font-medium">Moderate Standing Only</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-lg text-data-metric-lg text-tertiary font-bold">55%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Load</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full transition-all duration-500" style="width: 55%"></div>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-telemetry-code text-telemetry-code">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">escalator_warning</span> Family Seating Priority</span>
+<span>Zone C (Car 3)</span>
+</div>
+</div>
+<!-- Coach 4: Rear (Heavily Crowded) -->
+<div class="p-space-sm bg-surface-container-low rounded-xl shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-error-container text-error font-data-metric-sm text-data-metric-sm font-bold flex items-center justify-center">C4</span>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Rear Coach</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-telemetry-code bg-error-container text-error font-semibold">High Load</span>
+</div>
+<p class="font-body-sm text-body-sm text-error font-medium">Heavily Crowded • Dense Standing</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-lg text-data-metric-lg text-error font-bold">85%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Load</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-error h-2 rounded-full transition-all duration-500" style="width: 85%"></div>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-telemetry-code text-telemetry-code">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">door_back</span> Rapid Exit at Majestic Central</span>
+<span>Zone D (Car 4)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Environmental Telemetry & Onboard Comfort -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded-xl shadow-sm flex flex-col items-center justify-center text-center">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[18px]">ac_unit</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">AC Temp</span>
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface font-bold">22.5°C</span>
+<span class="text-[10px] font-telemetry-code text-secondary font-medium">Climate Opt</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-xl shadow-sm flex flex-col items-center justify-center text-center">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[18px]">accessible</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Access</span>
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface font-bold">Coach C2</span>
+<span class="text-[10px] font-telemetry-code text-secondary font-medium">Ramp Ready</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-xl shadow-sm flex flex-col items-center justify-center text-center">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[18px]">pedal_bike</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Cycles</span>
+<span class="font-data-metric-sm text-data-metric-sm text-on-surface font-bold">Coach C1</span>
+<span class="text-[10px] font-telemetry-code text-tertiary font-medium">3 Racks Left</span>
+</div>
+</div>
+<!-- Interactive Commuter Helper Card -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-semibold">Arrival Notifications</h4>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="buzz-toggle" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Haptic ping enabled. Your phone will buzz 60 seconds before Train #EXP-402 doors unlock at Platform 2.
+    </p>
+</div>
+<!-- Live Data Timestamp & System Trust Notice -->
+<div class="pt-space-xs pb-space-sm text-center space-y-1">
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant font-telemetry-code text-telemetry-code">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Updated: Just now (14:32:15 UTC) • Edge Sync &lt; 200ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 px-space-md leading-relaxed text-[11px]">
+      Demo Note: Coach occupancy values are estimated using LiDAR and optical edge sensors embedded on platform gantries.
+    </p>
+</div>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('station-toggle-btn');
+    const drawer = document.getElementById('station-drawer');
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', function() {
+        const isHidden = drawer.classList.contains('hidden');
+        if (isHidden) {
+          drawer.classList.remove('hidden');
+        } else {
+          drawer.classList.add('hidden');
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary bg-surface-container-high"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 px-space-xs rounded-lg text-on-surface-variant transition-colors" data-path="operator-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-caps text-label-caps mt-0.5">Dashboard</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 px-space-xs rounded-lg text-on-surface-variant transition-colors" data-path="live-ai-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">videocam</span><span class="font-label-caps text-label-caps mt-0.5">AI Monitor</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 px-space-xs rounded-lg transition-colors text-primary bg-surface-container-high" data-path="passenger-app" href="#"><span class="material-symbols-outlined text-[20px]">directions_subway</span><span class="font-label-caps text-label-caps mt-0.5">Passenger</span></a></div></nav></body></html>

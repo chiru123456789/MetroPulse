@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MetroPulse IoT Transit</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#051424;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#002113", "secondary-fixed": "#6ffbbe", "secondary-fixed-dim": "#4edea3", "inverse-on-surface": "#233143", "on-surface": "#d4e4fa", "on-primary": "#003640", "on-secondary": "#003824", "secondary-container": "#00a572", "on-tertiary-fixed": "#2a1700", "primary-fixed": "#acedff", "tertiary-fixed-dim": "#ffb95f", "error": "#ffb4ab", "surface-bright": "#2c3a4c", "surface-container-lowest": "#010f1f", "surface-tint": "#4cd7f6", "tertiary": "#ffb95f", "on-primary-container": "#00424f", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "primary-container": "#06b6d4", "inverse-surface": "#d4e4fa", "surface": "#051424", "tertiary-fixed": "#ffddb8", "on-error-container": "#ffdad6", "surface-container-high": "#1c2b3c", "primary-fixed-dim": "#4cd7f6", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#273647", "on-error": "#690005", "inverse-primary": "#00687a", "on-primary-fixed": "#001f26", "outline-variant": "#3d494c", "primary": "#4cd7f6", "on-secondary-container": "#00311f", "secondary": "#4edea3", "surface-variant": "#273647", "on-tertiary-fixed-variant": "#653e00", "surface-container": "#122131", "on-background": "#d4e4fa", "on-surface-variant": "#bcc9cd", "on-primary-fixed-variant": "#004e5c", "on-tertiary-container": "#563400", "background": "#051424", "tertiary-container": "#e79400", "outline": "#869397", "on-tertiary": "#472a00", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "space-md": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "gutter": "0.75rem", "margin-lg": "1.5rem", "gutter-lg": "1rem", "space-xl": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "data-metric-xl": ["JetBrains Mono"], "headline-xl": ["Inter"], "headline-xl-mobile": ["Inter"], "data-metric-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "label-caps": ["Inter"], "body-lg": ["Inter"], "telemetry-code": ["JetBrains Mono"], "body-md": ["Inter"], "data-metric-sm": ["JetBrains Mono"] }, "fontSize": { "data-metric-xl": ["28px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "data-metric-lg": ["20px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "telemetry-code": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "data-metric-sm": ["14px", { "lineHeight": "18px", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-24 px-margin flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="MetroPulse Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDG4FYmsJpq0lP8Y61xRhZ-8WNp4-oOYaYQGSnT3KIzY5RiO6fGBKFBWw9HlHgGVXs07XGos74WAHC-L33k7WboB-lvxvXucL3ASHmjtCicwD1-vHCYDv-V0H8_2YtUliidl9HqdmdrW-1v0FTM5jnLpPlISM9W4zRfDKP1J5KlknetzSOssQtZi-nrpvZ4gafqYZl97yPxKKCYB-ygDW_835LVbkV1UGvfesMSFmZm"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">MetroPulse</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Operator Dashboard</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded-lg"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-caps text-label-caps text-secondary uppercase">Live</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1 rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[14px]">train</span><span class="font-body-sm text-body-sm text-on-surface font-semibold">Majestic Station</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-telemetry-code text-telemetry-code text-on-surface-variant uppercase">Online | Low Latency Edge Sync</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-24 pb-20 bg-surface"><div class="flex flex-col w-full gap-space-md">
+<!-- Station Status Banner -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">Majestic Station</span>
+<span class="text-on-surface-variant font-body-sm">• Central Hub Line</span>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary-container/20 text-secondary px-2 py-0.5 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-caps text-label-caps font-semibold">Online</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">sync</span>
+<span class="font-telemetry-code text-telemetry-code">Edge sync: 12s ago</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-primary">14:32:08 UTC</span>
+</div>
+</section>
+<!-- Horizontal Operator Sub-Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-margin px-margin scrollbar-none">
+<button class="flex items-center gap-1.5 bg-surface-container-high text-primary px-space-md py-1.5 rounded-lg shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-[16px]">overview</span>
+<span class="font-label-caps text-label-caps font-semibold">Overview</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-low text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-lg whitespace-nowrap transition-colors">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span class="font-label-caps text-label-caps">Station Zones</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-low text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-lg whitespace-nowrap transition-colors">
+<span class="material-symbols-outlined text-[16px]">tram</span>
+<span class="font-label-caps text-label-caps">Coach Telemetry</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-low text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-lg whitespace-nowrap transition-colors">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span class="font-label-caps text-label-caps">IoT Hardware</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-low text-tertiary px-space-md py-1.5 rounded-lg whitespace-nowrap">
+<span class="material-symbols-outlined text-[16px]">notifications_active</span>
+<span class="font-label-caps text-label-caps">Alerts</span>
+<span class="bg-error-container text-on-error-container font-label-caps text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">2</span>
+</button>
+</div>
+<!-- 2x2 Telemetry KPI Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-caps text-label-caps uppercase">Total Pax</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="font-data-metric-xl text-data-metric-xl text-on-surface tracking-tight my-1">1,428</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="font-telemetry-code text-telemetry-code">+4.2% / 15m</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-caps text-label-caps uppercase">Avg Density</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="flex items-baseline gap-1.5 my-1">
+<span class="font-data-metric-xl text-data-metric-xl text-tertiary">68.4%</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">2.1 pax/m²</span>
+<span class="bg-tertiary/20 text-tertiary px-1.5 py-0.5 rounded font-label-caps text-[10px] uppercase font-semibold">Moderate</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-caps text-label-caps uppercase">IoT Devices</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">sensors</span>
+</div>
+<div class="font-data-metric-xl text-data-metric-xl text-secondary my-1">14<span class="text-on-surface-variant text-headline-md font-body-md font-normal"> / 14</span></div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-telemetry-code text-telemetry-code">100% Online</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-caps text-label-caps uppercase">Active Alerts</span>
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+</div>
+<div class="font-data-metric-xl text-data-metric-xl text-error my-1">02</div>
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="font-telemetry-code text-telemetry-code truncate">Surge &amp; Bottleneck</span>
+</div>
+</div>
+</div>
+<!-- Concourse & Platform Spatial Heatmap Schematic -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-1">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Concourse Heatmap</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time LiDAR &amp; optical headcount</p>
+</div>
+<!-- View Level Selector -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-caps text-label-caps font-semibold shadow-sm transition-all" id="btnLevel1">L1 Concourse</button>
+<button class="px-2 py-1 rounded text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-all" id="btnLevel2">L2 Platform</button>
+</div>
+</div>
+<!-- Floorplan Schematic Map Container -->
+<div class="relative w-full bg-surface-container-lowest rounded-xl p-space-sm overflow-hidden flex flex-col items-center">
+<!-- Grid Lines Background -->
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#4cd7f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="relative z-10 w-full flex flex-col gap-2">
+<!-- Zone A: Entrance Gates -->
+<div class="bg-surface-container-high/80 rounded-lg p-2 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(76,215,246,0.6)]"></span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Zone A • Entrance Turnstiles</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Flow: 142 pax/min • 8 Gates Active</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-sm text-data-metric-sm text-primary font-semibold">24%</span>
+<span class="font-label-caps text-[10px] text-primary block uppercase">Clear</span>
+</div>
+</div>
+<!-- Zone B: Ticket Counters -->
+<div class="bg-surface-container-high/80 rounded-lg p-2 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.5)]"></span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Zone B • Ticketing &amp; Kiosks</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Avg Queue: 3 min • 4 Kiosks</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-sm text-data-metric-sm text-secondary font-semibold">48%</span>
+<span class="font-label-caps text-[10px] text-secondary block uppercase">Optimal</span>
+</div>
+</div>
+<!-- Zone C: Stairs & Escalators (Surge) -->
+<div class="bg-surface-container-high/80 rounded-lg p-2 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shadow-[0_0_8px_rgba(255,185,95,0.6)] animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Zone C • Concourse Escalators</span>
+<span class="font-telemetry-code text-telemetry-code text-tertiary">Slowing flow • Ingress: 88 pax/m</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-sm text-data-metric-sm text-tertiary font-semibold">76%</span>
+<span class="font-label-caps text-[10px] text-tertiary block uppercase">Moderate</span>
+</div>
+</div>
+<!-- Zone D: Platform 2 Eastbound (High Surge) -->
+<div class="bg-error-container/20 rounded-lg p-2.5 flex items-center justify-between shadow-[0_0_12px_rgba(239,68,68,0.2)]">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error shadow-[0_0_10px_rgba(239,68,68,0.8)] animate-ping"></span>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-caps text-label-caps text-error font-bold">Zone D • Platform 2 East</span>
+<span class="bg-error text-on-error text-[9px] font-label-caps px-1 py-0.2 rounded font-bold uppercase">Surge</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-on-error-container">Train 04 arriving in 2m • Marshals alerted</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-metric-sm text-data-metric-sm text-error font-bold">89%</span>
+<span class="font-label-caps text-[10px] text-error block uppercase font-bold">Critical</span>
+</div>
+</div>
+</div>
+<!-- Density Visual Progress Scale -->
+<div class="w-full mt-3 pt-2 bg-surface-container-high/40 rounded-lg px-2 py-1.5 flex flex-col gap-1">
+<div class="flex items-center justify-between text-[10px] font-label-caps text-on-surface-variant uppercase">
+<span>Density Scale</span>
+<span>Max Capacity: 2,500</span>
+</div>
+<div class="h-2 w-full bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[40%]"></div>
+<div class="bg-secondary h-full w-[30%]"></div>
+<div class="bg-tertiary h-full w-[15%]"></div>
+<div class="bg-error h-full w-[15%]"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-telemetry-code text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Low &lt;40%</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 40-70%</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> Surge &gt;70%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Operational Tactical Alerts Feed -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[20px]">notifications_active</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Live Event Stream</h2>
+</div>
+<span class="font-telemetry-code text-telemetry-code bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">Real-time</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- High Alert Item -->
+<div class="bg-surface-container-high rounded-lg p-space-sm flex gap-space-sm items-start shadow-sm">
+<div class="w-7 h-7 rounded-lg bg-error/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-error font-bold">SURGE CRITICAL</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">14:31:45</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Platform 2 East: Crowd density threshold reached (89%). Auto-dispatching platform marshals.</p>
+<div class="flex items-center gap-2 mt-1.5">
+<button class="bg-error text-on-error font-label-caps text-label-caps px-2 py-0.5 rounded font-semibold transition-opacity active:opacity-80">Acknowledge</button>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">ID: ALT-4019</span>
+</div>
+</div>
+</div>
+<!-- Warning Alert Item -->
+<div class="bg-surface-container-high rounded-lg p-space-sm flex gap-space-sm items-start shadow-sm">
+<div class="w-7 h-7 rounded-lg bg-tertiary/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">hourglass_bottom</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-tertiary font-bold">FLOW BOTTLENECK</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">14:28:10</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Stairwell C Escalator: Flow reduction detected. Rate dropped to 18 pax/min.</p>
+</div>
+</div>
+<!-- Resolved Notice Item -->
+<div class="bg-surface-container-high rounded-lg p-space-sm flex gap-space-sm items-start shadow-sm opacity-75">
+<div class="w-7 h-7 rounded-lg bg-secondary/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-semibold">FLOW RESTORED</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">14:20:00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Turnstile Bank 04: Flow normalized to 140 pax/min baseline.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Hardware & Edge Connectivity Status -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">developer_board</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">IoT Edge Telemetry Nodes</h3>
+</div>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 3/3 SYNCED
+      </span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Node 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Jetson Orin Nano Edge Unit</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">28.4 FPS • 18ms Latency • Temp: 46°C</span>
+</div>
+</div>
+<span class="font-telemetry-code text-[11px] text-secondary font-semibold">ONLINE</span>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">ESP32 Sensor Node (Platform 2)</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">LiDAR + BLE RSSI: -58dBm • Mesh Active</span>
+</div>
+</div>
+<span class="font-telemetry-code text-[11px] text-secondary font-semibold">ONLINE</span>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">STM32 Microcontroller (Turnstiles)</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">CAN Bus 500kbps • 0% Packet Loss</span>
+</div>
+</div>
+<span class="font-telemetry-code text-[11px] text-secondary font-semibold">ONLINE</span>
+</div>
+</div>
+<!-- Dispatcher Metadata Footer -->
+<div class="flex items-center justify-between pt-1 text-on-surface-variant text-[11px] font-telemetry-code">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">autorenew</span>
+<span>Auto-refreshing (5s interval)</span>
+</div>
+<span>Session: CTRL-8842</span>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for Concourse vs Platform tabs
+  const btnL1 = document.getElementById('btnLevel1');
+  const btnL2 = document.getElementById('btnLevel2');
+
+  if (btnL1 && btnL2) {
+    btnL1.addEventListener('click', () => {
+      btnL1.className = 'px-2 py-1 rounded bg-primary text-on-primary font-label-caps text-label-caps font-semibold shadow-sm transition-all';
+      btnL2.className = 'px-2 py-1 rounded text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-all';
+    });
+    btnL2.addEventListener('click', () => {
+      btnL2.className = 'px-2 py-1 rounded bg-primary text-on-primary font-label-caps text-label-caps font-semibold shadow-sm transition-all';
+      btnL1.className = 'px-2 py-1 rounded text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-all';
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary bg-surface-container-high"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 px-space-xs rounded-lg transition-colors text-primary bg-surface-container-high" data-path="operator-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-caps text-label-caps mt-0.5">Dashboard</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 px-space-xs rounded-lg text-on-surface-variant transition-colors" data-path="live-ai-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">videocam</span><span class="font-label-caps text-label-caps mt-0.5">AI Monitor</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 px-space-xs rounded-lg text-on-surface-variant transition-colors" data-path="passenger-app" href="#"><span class="material-symbols-outlined text-[20px]">directions_subway</span><span class="font-label-caps text-label-caps mt-0.5">Passenger</span></a></div></nav></body></html>
