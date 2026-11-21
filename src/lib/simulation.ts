@@ -334,7 +334,7 @@ export function stepSimulation(state: SimulationState): SimulationState {
           time: currentTime,
           severity: "high",
         });
-      } else if (newSeverity === "normal" && (zone.previousSeverity === "high" || zone.previousSeverity === "critical")) {
+      } else if (newSeverity === "normal") {
         newAlerts.unshift({
           id: `ALT-${alertCounter++}`,
           type: "FLOW RESTORED",

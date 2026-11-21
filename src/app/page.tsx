@@ -256,7 +256,7 @@ export default function Home() {
                 value={String(simState.alerts.length).padStart(2, "0")}
                 detail={
                   simState.alerts.length === 0
-                    ? "All thresholds nominal"
+                    ? "No unacknowledged simulated alerts"
                     : "Unacknowledged simulated alerts"
                 }
                 icon={Bell}
